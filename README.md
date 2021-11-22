@@ -23,6 +23,8 @@ optional arguments:
 
 ## Output
 ### CLI
+
+size in bytes
 ```angular2html
 targets/
 ├── .dccache
@@ -39,19 +41,29 @@ targets/
 │   │   │   └── tsconfig.tsbuildinfo
 ```
 ### JSON
+
 ```json
 {
-  "name": "gensync-utils",
+  "name": "helpers",
   "type": "folder",
+  "size": 4096,
   "items": [
     {
-      "name": "async.js",
+      "name": "config-api.js",
       "type": ".js",
+      "size": 2207,
       "items": []
     },
     {
-      "name": "fs.js",
+      "name": "environment.js",
       "type": ".js",
+      "size": 227,
+      "items": []
+    },
+    {
+      "name": "escape-regexp.js",
+      "type": ".js",
+      "size": 63,
       "items": []
     }
   ]

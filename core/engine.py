@@ -15,6 +15,7 @@ class DisplayablePath(object):
         self.json_info = {
             'name': self.path.name,
             'type': self.file_type,
+            'size': self.file_size,
             'items': list()
         }
 
@@ -58,6 +59,10 @@ class DisplayablePath(object):
         if self.path.is_dir():
             return 'folder'
         return self.path.suffix
+
+    @property
+    def file_size(self):
+        return self.path.stat().st_size
 
     def displayable(self):
         if self.parent is None:
