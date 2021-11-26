@@ -14,9 +14,10 @@ class DisplayablePath(object):
         self.depth = self.parent.depth + 1 if self.parent else 0
         self.json_info = {
             'name': self.path.name,
+            'full_path': str(path),
             'type': self.file_type,
             'size': self.file_size,
-            'items': list()
+            'items': list(),
         }
 
     @classmethod
